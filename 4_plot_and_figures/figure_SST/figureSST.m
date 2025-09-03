@@ -49,7 +49,7 @@ all_prec(4,:,:)=aut_perc;
 %%%%Xing replot this dust figure
 ylimcc=[0 20]
 xlimcc=[-89 0]
-Boundary =shaperead('landareas.shp');
+Boundary =shaperead('/home/xzhou473/MATLAB/R2023a/toolbox/map/mapdata/landareas.shp');
 CCC0=[-100:2:100];
 %CCC1=[-25:1:25];
 CCC1=[-20:2:20];
@@ -126,7 +126,7 @@ all_prec(4,:,:)=aut_perc;
 
 ylimcc=[0 20]
 xlimcc=[-89 0]
-Boundary =shaperead('landareas.shp');
+Boundary =shaperead('/home/xzhou473/MATLAB/R2023a/toolbox/map/mapdata/landareas.shp');
 CCC0=[-1:0.1:1];
 %CCC1=[-25:1:25];
 CCC1=[-1:0.1:1];
@@ -194,8 +194,8 @@ ylabel(hbar,'MLD diffirence (m)')
 lon_big=[-89,-15,-15,-89,-89]
 lat_big=[1,1,15,15,1];
 
-inaa = inpolygon(Xd, Yd, lon_big, lat_big);
-%inaa = inpolygon(Xd,Yd,lon_contour,lat_contour);
+%inaa = inpolygon(Xd, Yd, lon_big, lat_big);
+inaa = inpolygon(Xd,Yd,lon_contour,lat_contour);
 
 for i=1:360%size(data,3)
 tmp1=squeeze(data(:,:,i));
@@ -398,4 +398,4 @@ hbar = adjustcolorbar(0.47,0.15,2,0.3,6.5);
 set(hbar,'TickDir','out')
 ylabel(hbar,'SST difference (\circ C)')
 %outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/figure_SST/figureSST.png'];print([outfile],'-dpng','-r300');
-outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/Lat1to15/figureSST.png'];print([outfile],'-dpng','-r300');
+%outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/Lat1to15/figureSST.png'];print([outfile],'-dpng','-r300');

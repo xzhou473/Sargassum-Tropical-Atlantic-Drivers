@@ -705,17 +705,17 @@ end
 %%%MLD^3
 for yptest1=1:length(MLT_shifted)
 if MLT_shifted(yptest1) >=0
-%yp1(yptest1) = (b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
+yp1(yptest1) = (b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
 %yp1(yptest1) = (b2.*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(b2.*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
 %yp1(yptest1) = (b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
 %yp1(yptest1) = (b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1)+b4*(SST_nonlinear(yptest1))).*sign(heaviside(b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1)+b4*(SST_nonlinear(yptest1))));
-yp1(yptest1) = (b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))).*sign(heaviside(b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))));
+%yp1(yptest1) = (b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))).*sign(heaviside(b1.*(MLT_shifted(yptest1)).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))));
 else
-%yp1(yptest1) = (-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
+yp1(yptest1) = (-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
 %yp1(yptest1) = (b2.*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(b2.*conc_previous(yptest1) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
 %yp1(yptest1) = (-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))).*sign(heaviside(-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3) + b3.*(DUST(yptest1))+b4*(SST_nonlinear(yptest1))));
 %yp1(yptest1) = (-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1)+b4*(SST_nonlinear(yptest1))).*sign(heaviside(-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1)+b4*(SST_nonlinear(yptest1))));
-yp1(yptest1) = (-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))).*sign(heaviside(-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))));
+%yp1(yptest1) = (-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))).*sign(heaviside(-b1.*(abs(MLT_shifted(yptest1))).^abs(b5) + b2*(1-MLT_avgnorm1(yptest1).^3).*conc_previous(yptest1) + b3.*(DUST(yptest1))));
 end
 end
 
@@ -789,7 +789,7 @@ h2.MarkerFaceColor = [65,174,118]./256;
 %h2.FaceAlpha = 0.7;
 %h2.EdgeColor = 'none';
 hold on 
-title('(e)')
+%title('(e)')
 h3 = plot(datevector(a:b), obs_webdig, '-o');hold on  % Use '-o' for line with circle markers
 % Set line color (gray)
 h3.Color = [.3 .3 .3];
@@ -829,7 +829,7 @@ text(2025, 21, ['MSE = ' sprintf('%.2f', mean((yp1' - obs_webdig).^2))], 'FontSi
 %outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/figure_nonlinearmodel/Fig3_MLDrag3.png'];print([outfile],'-dpng','-r300');
 %outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/Lat1to15/Regressiontest/Fig3_4_version2.png'];print([outfile],'-dpng','-r300');
 %outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/GASB/Fig3.png'];print([outfile],'-dpng','-r300');
-outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/FigS4/FigS4e.png'];print([outfile],'-dpng','-r300');
+%outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/FigS4/FigS4e.png'];print([outfile],'-dpng','-r300');
 
 %%
 %%%%calculate each term contribution
@@ -873,107 +873,4 @@ ylabel('Sargassum concentrations [Mton]')
 ylim([-1 15])
 legend('MLD term contribute','Self-seeding term contribute','Location','northwest')
 title('(b)')
-outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/Lat1to15/Regressiontest/Fig3b_4.png'];print([outfile],'-dpng','-r300');
-
-%% Compute the 0-lag Pearson's correlation between my estimator and the digitized observations
-
-
-Corr = corr(obs_webdig,yp1);               % This is the 0-lag Pearson's correlation between my estimator and the digitized observations
-
-%Rmse_of_estimator = rmse(obs_webdig,yp1);
-
-disp ' Trained from - to:  '
-observation_dates(Training_ini)
-observation_dates(Training_end)
-
-
-
-Corr
-
-disp ' Finished Non Linear Regression model'
-
-%% NOT SURE IF USEFUL: BUT WE COULD VERIFY THE STABILITY OF THE DETERMINED COEFFICIENTS: i.e. by repeating the fitting N times, all the bi should be more or less the same 
-clc
-
-% Select how many iterations: N
-%close all
-N = 50; 
-
-clear b1_i b2_i b3_i b4_i 
-clear initial_values 
-% Initialize dummy vectors for coefficients 
-b1_i(1:N) = -999;
-b2_i(1:N) = -999;
-b3_i(1:N) = -999;
-b4_i(1:N) = -999;
-initial_values(1:N,1:4) = NaN;
-
-% Create a loop where you evaluate all the bi coefficietns from scratch at
-% each cycle, and you store each of them in a vector. 
-
-% Essentially, you just re-run the non linear regression to obtain the coefficients: 
-% (no need to re-define the model function nor the table, because it's the one defined above)
-
-for i = 1:N 
-   
-   
-    % Pseudo Random initial values chosen between at i-th iteration: 
-    % pseudorandom values drawn from the standard uniform distribution on the open interval(0,1).
-    % (uniform distributions are essentially probability distributions with equally likely outcomes)
-     
-     beta0_1 = rand(1,1);    
-     beta0_2 = rand(1,1); 
-     beta0_3 = rand(1,1);  
-     beta0_4 = rand(1,1);
-      
-     beta0_i = [beta0_1 beta0_2 beta0_3 beta0_4];
-     
-    % Store initial vaklues here just for a lter check 
-    initial_values(i,1:4) = beta0_i;
-    
-    % Fit non linear model, at i-th iteration: (model function and table are the same already defined above.)   
-    mdl_nl_i = fitnlm(tbl,modelfun,beta0_i); 
-
-    % Table to array to extract the coefficients value, at i-th iteration:  
-    Bi_i = table2array(mdl_nl_i.Coefficients);
-    
-    b1_i(i) = Bi_i(1,1);
-    b2_i(i) = Bi_i(2,1);
-    b3_i(i) = Bi_i(3,1);
-    b4_i(i) = Bi_i(4,1);
-    
-    clear beta0_i   
-    clear mdl_nl_i
-    clear Bi_i
-    i
-end
-
-
-% Finally plot the resulting coefficients againts the iteration 
-figure 
-subplot(2,2,1)
-plot(b1_i,'k.')
-ylabel 'b1'
-xlabel 'iter'
-
-subplot(2,2,2)
-plot(abs(b2_i),'k.')
-ylabel '|b2|'
-xlabel 'iter'
-
-subplot(2,2,3)
-plot(abs(b3_i),'k.')
-ylabel '|b3|'
-xlabel 'iter'
-
-subplot(2,2,4)
-plot(b4_i,'k.')
-ylabel 'b4'
-xlabel 'iter'
-
-
-
-%% Confrontati con quelli calcolati prima: 
-[b1 b2 b3 b4]
-
-round(Corr,2)
+%outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/Lat1to15/Regressiontest/Fig3b_4.png'];print([outfile],'-dpng','-r300');

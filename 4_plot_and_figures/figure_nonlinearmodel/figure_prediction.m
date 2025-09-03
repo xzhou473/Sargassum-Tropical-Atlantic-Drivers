@@ -23,12 +23,13 @@ clc
 cd ('/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/scripts')
 %resultspath1 = '../utils/fldmean_data/fldm_of_1993_2022_glorys_mlt_reducedGASB_masked_deseas_1-12deg.nc'     % fldm of deseasonalized mlt (see readme in that folder)
 %resultspath1 = '/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/fldm_of_1993_2022_glorys_mlt_reducedGASB_masked_deseas_1-12deg.nc' 
-resultspath1 = '..//utils/newdata/domain/Lat1to15/fldm_of_1993_dec2024_glorys_mlt_masked_deseas_1-12deg_Lat_1-15.nc' 
+resultspath1 = '../utils/newdata/domain/Lat1to15/fldm_of_1993_dec2024_glorys_mlt_masked_deseas_1-12deg_Lat_1-15.nc' 
 %%%%% spatial field 1993_2022_glorys_mlt_TA_masked_025remapped_GASB_deseas.nc                                      
 
 % Path to dust timeseries:
 %resultspath3 = '../utils/fldmean_data/fldm_of_duaod550_f64_res075_2003-2022_deseas_reducedGASB.nc'                % fldmean of deseasonalized duaod550 (see readme in that folder)
-resultspath3 = '/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/fldm_of_duaod550_f64_res075_2003-2022_deseas_reducedGASB.nc' 
+%resultspath3 = '/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/fldm_of_duaod550_f64_res075_2003-2022_deseas_reducedGASB.nc' 
+resultspath3 = '../utils/newdata/domain/Lat1to15/fldm_of_duaod550_f64_res075_2003-2022_deseas_reducedGASB_Lat_1-15.nc'
 %%%% spatial field duaod550_f64_res075_2003-2022_GASB_deseas.nc
 
 % -----------------
@@ -793,7 +794,7 @@ yp2=yp_all(1,1:168)';
 %yp1 = (b1*exp(MLT_shifted(1:end)).^abs(b2) + b4*(DUST(1:end))).*sign(heaviside(b1*exp(MLT_shifted(1:end)).^abs(b2)+ b4*(DUST(1:end)))); %exclude Clag
 %yp1 = (b1*exp(MLT_shifted(1:end)).^abs(b2) + (conc_previous.^abs(b3)) ).*sign(heaviside(b1*exp(MLT_shifted(1:end)).^abs(b2) + (conc_previous.^abs(b3)))); %exclude DUST
 
-yp3=[ypold1(1:NORMINDEX);  yp2(NORMINDEX+1:end)];
+yp3=[ypold1(1:NORMINDEX)';  yp2(NORMINDEX+1:end)];
 figure(23)
 clf
 scale2=80;
@@ -903,8 +904,8 @@ text(2025,23,['R=' sprintf('%.2f', corr(obs_webdig(1:end), yp3(1:end)))],'Fontsi
 text(2025, 21, ['MSE = ' sprintf('%.2f', mean((yp3(1:end) - obs_webdig(1:end)).^2))], 'FontSize', 15,'color','k')
 
 
-text(2025,19,['R=' sprintf('%.2f', corr(obs_webdig(NORMINDEX+1:end), yp3(NORMINDEX+1:end)))],'Fontsize',15,'color',[34,94,168]./256)
-text(2025, 17, ['MSE = ' sprintf('%.2f', mean((yp3(NORMINDEX+1:end) - obs_webdig(NORMINDEX+1:end)).^2))], 'FontSize', 15,'color',[34,94,168]./256)
+%text(2025,19,['R=' sprintf('%.2f', corr(obs_webdig(NORMINDEX+1:end), yp3(NORMINDEX+1:end)))],'Fontsize',15,'color',[34,94,168]./256)
+%text(2025, 17, ['MSE = ' sprintf('%.2f', mean((yp3(NORMINDEX+1:end) - obs_webdig(NORMINDEX+1:end)).^2))], 'FontSize', 15,'color',[34,94,168]./256)
 %%%2024 only
 %text(2025,15,['R=' sprintf('%.2f', corr(obs_webdig(end-12:end), yp2(end-12:end)))],'Fontsize',15,'color','k')
 %text(2025, 13, ['MSE = ' sprintf('%.2f', mean((yp2(end-12:end) - obs_webdig(end-12:end)).^2))], 'FontSize', 15,'color','k')
@@ -934,7 +935,7 @@ text(2025, 17, ['MSE = ' sprintf('%.2f', mean((yp3(NORMINDEX+1:end) - obs_webdig
 %outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/figure_nonlinearmodel/Fig3_MLDrag3.png'];print([outfile],'-dpng','-r300');
 
 %outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/figure_prediction/FigS5_2022to2024_newequation.png'];print([outfile],'-dpng','-r300');
-outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/Lat1to15/Regressiontest/FigS5_4_20232024_version2.png'];print([outfile],'-dpng','-r300');
+%outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/utils/newdata/domain/Lat1to15/Regressiontest/FigS5_4_20232024_version2.png'];print([outfile],'-dpng','-r300');
 %% 
 figure(43)
 clf

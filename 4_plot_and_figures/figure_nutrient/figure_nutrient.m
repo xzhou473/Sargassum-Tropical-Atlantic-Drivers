@@ -59,4 +59,4 @@ ax.YAxis(2).Color = line_color;
 set(gca,'fontsize',10)
 set(gca,'Tickdir','out')
 xlabel('Years')
-outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/figure_nutrient/Fig4_GASB_lag3months.png'];print([outfile],'-dpng','-r300');
+%outfile=['/media/xzhou473/Seagate Backup Plus Drive/Sargassum/Sarg_for_Xing/Sarg_for_Xing/paperfigure/figure_nutrient/Fig4_GASB_lag3months.png'];print([outfile],'-dpng','-r300');
