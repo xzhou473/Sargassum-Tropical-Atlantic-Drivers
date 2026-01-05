@@ -1,15 +1,18 @@
-# Time-changing drivers of pelagic *Sargassum* inundations in the tropical Atlantic
+**Evolving Drivers of the GASB: From Physical Forcing to Ecological Control**
 
-This repository contains code and data associated with the paper:
+Xing Zhou¹,†, Lyuba Novi¹,†,², Mark E. Hay³,⁴, Joseph P. Montoya³,⁴, Aderinsola Aliu⁵, Matthew J. Realff⁵, and Annalisa Bracco³,⁶*
 
-**Zhou, X.†, Novi, L.†, Hay, M. E., Montoya, J. P., Aliu, A., Realff, M. J., & Bracco, A.**  
-*Time-changing drivers of pelagic Sargassum inundations in the tropical Atlantic*  
-Submitted to **XXX journal**
+¹ School of Earth and Atmospheric Sciences, Georgia Institute of Technology, Atlanta, GA 30332, USA
+² National Oceanography Centre, Liverpool, UK
+³ Program in Ocean Sciences and Engineering, Georgia Institute of Technology, Atlanta, GA, USA
+⁴ School of Biological Sciences, Georgia Institute of Technology, Atlanta, GA, USA
+⁵ School of Chemical and Biomolecular Engineering, Georgia Institute of Technology, Atlanta, GA, USA
+⁶ CMCC Foundation, Euro-Mediterranean Center on Climate Change, Milan, Italy
 
-*Correspondence: abracco@gatech.edu*
+* Correspondence: annalisa.bracco@cmcc.it
+† Xing Zhou and Lyuba Novi contributed equally to this work.
 
-## 📊 How to Reproduce Results
+**Repository Description**
 
-1. Go through the numbered folders (`1/` to `4/`) in order.
-2. In each folder, run the `runall.sh` script to execute the corresponding analysis.
-3. After all preprocessing steps are completed, go to the `5_plot_and_figures/` folder and run the MATLAB scripts to generate the figures in the manuscript.
+This repository includes the data and code required to reproduce the figures and, in particular, the statistical model results presented in the manuscript above. Detailed instructions for reproducing the results are provided in reproduce.docx
+
