@@ -21,5 +21,5 @@ Xing Zhou¹,†, Lyuba Novi¹,†,², Mark E. Hay³,⁴, Joseph P. Montoya³,⁴
 
 **Repository Description**
 
-This repository includes the data and code required to reproduce the figures and, in particular, the statistical model results presented in the manuscript above. Detailed instructions for reproducing the results are provided in reproduce.docx
+This repository includes the data and code required to reproduce the figures and, in particular, the statistical model results presented in the manuscript above. Detailed instructions for reproducing the results are provided in **reproduce.docx**
 
