@@ -1,4 +1,4 @@
-**Evolving Drivers of the GASB: From Physical Forcing to Ecological Control**
+**Changing Drivers of the Great Atlantic Sargassum Belt: From Physical Forcing to Ecological Control**
 
 Xing Zhou¹,†, Lyuba Novi¹,†,², Mark E. Hay³,⁴, Joseph P. Montoya³,⁴, Aderinsola Aliu⁵, Matthew J. Realff⁵, and Annalisa Bracco³,⁶*
 
@@ -23,3 +23,4 @@ Xing Zhou¹,†, Lyuba Novi¹,†,², Mark E. Hay³,⁴, Joseph P. Montoya³,⁴
 
 This repository includes the data and code required to reproduce the figures and, in particular, the statistical model results presented in the manuscript above. Detailed instructions for reproducing the results are provided in **reproduce.docx**
 
+This work has been accepted in Nature Communications.
