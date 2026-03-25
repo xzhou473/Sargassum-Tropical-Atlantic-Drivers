@@ -312,6 +312,7 @@ axes(ha(2*i-2))
 plot(years,datatmp1_annual_mean(i,:),'ko-','linewidth',2.0);hold on
 plot(years(1:12),ones(1,12).*mean(datatmp1_annual_mean(i,1:12),2),'-','color',[254,178,76]./255,'linewidth',2.0);hold on
 plot(years(13:24),ones(1,12).*mean(datatmp1_annual_mean(i,13:24),2),'-','color',[189,1,38]./255,'linewidth',2.0);hold on
+[hh1(i),pp1(i)]=ttest2(datatmp1_annual_mean(i,1:12), datatmp1_annual_mean(i,13:24))
 xlim([1999 2022])
 
 
@@ -329,9 +330,9 @@ end
 set(gca,'fontsize',9)
 set(gca,'Tickdir','out')
 title(titlestringV2{i})
-lgd=legend({['Wind stress anomaly (Pa)'], ...
-        ['1999-2010 mean: ' num2str(mean(datatmp1_annual_mean(i,1:12),2), '%.1e') ' (pa)'], ...
-        ['2011-2022 mean: ' num2str(mean(datatmp1_annual_mean(i,13:24),2), '%.1e') ' (pa)']}, ...
+lgd=legend({['Wind stress anomaly'], ...
+        ['1999-2010 mean: ' num2str(mean(datatmp1_annual_mean(i,1:12),2), '%.1e') ' (Pa)'], ...
+        ['2011-2022 mean: ' num2str(mean(datatmp1_annual_mean(i,13:24),2), '%.1e') ' (Pa)']}, ...
        'Location', 'northwest');
 legend boxoff
 ylim([-0.02 0.04])
